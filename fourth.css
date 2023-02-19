@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #bad7e9;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card {
+  width: 700px;
+  height: 500px;
+  border-radius: 56px;
+  background: #bad7e9;
+  box-shadow: 15px 15px 0px #030021, -15px -15px 0px #09006d;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
