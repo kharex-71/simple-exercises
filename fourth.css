@@ -23,3 +23,34 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+
+.conteiner {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 98%;
+  height: 98%;
+  border-radius: 56px;
+  background-image: url("./image/background.jpg");
+}
+
+.Btn {
+  width: 70px;
+  height: 35px;
+  background-color: #09006d;
+  color: #bad7e9;
+  border-radius: 8px;
+  border-style: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#next {
+  position: absolute;
+  right: 0;
+}
+
+#prev {
+  position: absolute;
+  left: 0;
+}
