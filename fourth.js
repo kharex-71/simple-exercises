@@ -12,7 +12,7 @@ next.addEventListener("click", () => {
   conteiner.style.backgroundImage = `url("./image/bcg-${count}.jpg")`;
 });
 prev.addEventListener("click", () => {
-  if (count === 0) {
+  if (count === -1) {
     count = 5;
   }
   count--;

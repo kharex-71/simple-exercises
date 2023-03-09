@@ -1,50 +1,31 @@
-const georgia = document.getElementById("watch0");
-//const japan = document.getElementById("watch1");
-//const russia = document.getElementById("watch2");
-//const ireland = document.getElementById("watch3");
+const clock = document.getElementById("watch0");
+const jpn = document.getElementById("watch1");
+const russ = document.getElementById("watch2");
+const irld = document.getElementById("watch3");
 
-function showTime() {
-  let date = new Date();
+console.log(clock, jpn, russ, irld);
 
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
-  let seconds = date.getSeconds();
-
-  let formatedTime = formatTime(hours);
-  hours = checkTime(hours);
-  //console.log(date, hours, minutes, seconds);
-
-  hours = addZero(hours);
-  minutes = addZero(minutes);
-  seconds = addZero(seconds);
-
-  georgia.innerHTML = `${hours}:${minutes}:${seconds}:${formatedTime} `;
+function georgia() {
+  let change = new Date().toLocaleTimeString("en-US", {
+    timeZone: "Asia/Tbilisi",
+    timeStyle: "medium",
+    hourCycle: "h11",
+  });
+  clock.innerHTML = change;
+  setInterval(georgia, 1000);
 }
+georgia();
 
-function checkTime(time) {
-  if (time > 12) {
-    time = time - 12;
-  }
-  if (time === 0) {
-    time = 12;
-  }
-  return time;
+
+
+
+function Japan() {
+  let display = new Date().toLocaleTimeString("en-US", {
+    timeZone: "	Asia/Tokyo",
+    timeStyle: "medium",
+    hourCycle: "h11",
+  });
+  jpn.innerHTML = display;
+  setInterval(Japan, 1000);
 }
-
-function formatTime(time) {
-  let format = "AM";
-  if (time >= 12) {
-    format = "PM";
-  }
-  return format;
-}
-
-function addZero(time) {
-  if (time < 10) {
-    time = "0" + time;
-  }
-  return time;
-}
-
-showTime();
-setInterval(showTime, 999);
+Japan();
